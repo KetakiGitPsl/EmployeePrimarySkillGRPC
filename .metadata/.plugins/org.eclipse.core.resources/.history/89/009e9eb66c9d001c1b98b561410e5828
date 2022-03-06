@@ -1,0 +1,2 @@
+2022-02-22 12:59:03.645 [main] INFO  com.mycompany.EmpGRPCClient - Employee with id 1234 has primary skill as JAVA
+2022-02-22 12:59:24.752 [main] INFO  com.mycompany.EmpGRPCClient - Employee with id 5678 has primary skill as .NET

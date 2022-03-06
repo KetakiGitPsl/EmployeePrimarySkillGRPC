@@ -1,0 +1,34 @@
+package com.mycompany.dataaccess;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.mycompany.entity.EmpPrimarySkill;
+
+public class EmployeePrimarySkillDataAccess {
+
+
+	public static String getEmployeePrimarySkill(int empId) {
+		EntityManagerFactory emf = null;
+		EntityManager em = null;
+		String pri = "";
+
+		try {
+			emf = Persistence.createEntityManagerFactory("PrimarySkillPU");
+			em = emf.createEntityManager();
+			EmpPrimarySkill e = em.find(EmpPrimarySkill.class, empId);
+			pri = e.getPrimarySkill();
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		} finally {
+			em.close();
+			emf.close();
+		}
+
+		return pri;
+
+	}
+
+}

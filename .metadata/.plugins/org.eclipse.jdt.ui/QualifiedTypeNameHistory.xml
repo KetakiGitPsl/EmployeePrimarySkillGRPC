@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="io.grpc.ServerBuilder"/>
+<fullyQualifiedTypeName name="com.mycompany.employeeGrpc.employeeImplBase"/>
+<fullyQualifiedTypeName name="com.mycompany.Employee.APIResponse.Builder"/>
+<fullyQualifiedTypeName name="com.mycompany.service.EmployeeGRPCService"/>
+<fullyQualifiedTypeName name="io.grpc.Server"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
+<fullyQualifiedTypeName name="com.mycompany.entity.EmpPrimarySkill"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+<fullyQualifiedTypeName name="com.mycompany.dataaccess.EmployeePrimarySkillDataAccess"/>
+<fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
+</qualifiedTypeNameHistroy>

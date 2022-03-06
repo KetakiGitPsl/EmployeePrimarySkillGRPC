@@ -1,0 +1,25 @@
+package com.mycompany;
+
+import com.mycompany.Employee.APIResponse;
+import com.mycompany.Employee.EmployeePrimarySkillRequest;
+import com.mycompany.employeeGrpc.employeeBlockingStub;
+
+import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
+
+public class EmpGRPCClient {
+	
+	
+	ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",9090).usePlaintext().build();
+	
+	// stubs - generate from proto
+	
+	employeeBlockingStub empStub = employeeGrpc.newBlockingStub(channel);
+	
+	EmployeePrimarySkillRequest employeePrimarySkillRequest = EmployeePrimarySkillRequest.newBuilder().setEmpId(1234).build();
+	
+	APIResponse response = empStub.getEmployeePrimarySkill(employeePrimarySkillRequest);
+	
+	System.out.println(response.get);
+
+}

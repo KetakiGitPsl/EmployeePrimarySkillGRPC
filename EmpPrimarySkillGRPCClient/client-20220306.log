@@ -1,0 +1,19 @@
+2022-03-06 12:37:11.513 [main] ERROR com.mycompany.EmpGRPCClient - Invalid employee ID. Please retry.
+2022-03-06 12:37:42.180 [main] INFO  com.mycompany.EmpGRPCClient - Employee with id 1234 has primary skill as JAVA
+2022-03-06 12:43:21.499 [main] INFO  com.mycompany.EmpGRPCClient - Employee with id 1234 has primary skill as JAVA
+2022-03-06 13:19:41.401 [main] INFO  com.mycompany.EmpGRPCClient - Employee with id 1234 has primary skill as JAVA
+2022-03-06 13:21:52.610 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 1234 has primary skill as JAVA
+2022-03-06 13:38:02.886 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 1234 has primary skill as JAVA
+2022-03-06 13:47:49.723 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 1234 has primary skill as JAVA
+2022-03-06 13:51:23.848 [main] ERROR com.mycompany.EmpPrimarySkillGRPCClient - Something went wrong. Probably invalid employee ID. Please retry.
+2022-03-06 13:51:56.343 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 5678 has primary skill as .NET
+2022-03-06 13:58:05.201 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 5678 has primary skill as .NET
+2022-03-06 14:06:47.923 [main] ERROR com.mycompany.EmpPrimarySkillGRPCClient - Something went wrong. Probably invalid employee ID. Please retry.
+2022-03-06 14:09:37.168 [main] ERROR com.mycompany.EmpPrimarySkillGRPCClient - Something went wrong. Probably invalid employee ID. Please retry.
+2022-03-06 14:22:35.758 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Could not retrieve Primary skill for employee with id 5. Perhaps employee with said ID could not be found.
+2022-03-06 14:24:17.992 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 5678 has primary skill as .NET
+2022-03-06 14:25:05.215 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 5678 has primary skill as .NET
+2022-03-06 14:25:24.568 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Could not retrieve Primary skill for employee with id 785829. Perhaps employee with said ID could not be found.
+2022-03-06 22:13:40.767 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Could not retrieve Primary skill for employee with id 785829. Perhaps employee with said ID could not be found.
+2022-03-06 22:14:06.285 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 1234 has primary skill as JAVA
+2022-03-06 22:24:10.570 [main] INFO  com.mycompany.EmpPrimarySkillGRPCClient - Employee with id 1234 has primary skill as JAVA

@@ -1,0 +1,42 @@
+package com.mycompany.service;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.mycompany.Employee.APIResponse;
+import com.mycompany.Employee.EmployeePrimarySkillRequest;
+import com.mycompany.employeeGrpc.employeeImplBase;
+import com.mycompany.dataaccess.EmployeePrimarySkillDataAccess;
+
+import io.grpc.stub.StreamObserver;
+
+public class EmployeeGRPCService extends employeeImplBase {
+	
+	//private EmployeePrimarySkillDataAccess dataAccess = new EmployeePrimarySkillDataAccess();
+
+	@Override
+	public void getEmployeePrimarySkill(EmployeePrimarySkillRequest request,
+			StreamObserver<APIResponse> responseObserver) {
+		
+		int id = request.getEmpId();
+		
+		//go to data base and return 
+		String priSkill = EmployeePrimarySkillDataAccess.getEmployeePrimarySkill(id);
+		
+		APIResponse.Builder response = APIResponse.newBuilder();
+		
+		response.setResponseCode(0).setResponsemessage("Success").setPrimarySkill(priSkill);
+		
+		responseObserver.onNext(response.build());
+		responseObserver.onCompleted();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

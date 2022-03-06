@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "com.mycompany";
+
+service employee{
+    rpc getEmployeePrimarySkill(EmployeePrimarySkillRequest)  returns (APIResponse);
+     
+}
+
+message EmployeePrimarySkillRequest{
+       int32 empId = 1 ;
+}
+
+message APIResponse{
+      string responsemessage = 1;
+      int32  responseCode  = 2;
+      string primarySkill =3;
+}
+
+

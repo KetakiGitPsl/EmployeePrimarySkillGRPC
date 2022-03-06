@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_package = "com.mycompany";
+
+service employee{
+    rpc getEmployeeDetail(EmployeeDetailRequest)  returns (APIResponse);
+     
+}
+
+message EmployeeDetailRequest{
+       int32 empId = 1 ;
+}
+
+message APIResponse{
+      string responsemessage = 1;
+      int32  responseCode  = 2;
+      string primarySkill =3;
+}
+
+message Empty{
+}

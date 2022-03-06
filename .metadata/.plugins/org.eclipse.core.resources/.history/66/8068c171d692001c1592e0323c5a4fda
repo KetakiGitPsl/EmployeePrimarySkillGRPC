@@ -1,0 +1,35 @@
+package com.mycompany.service;
+
+import com.mycompany.Employee.APIResponse;
+import com.mycompany.Employee.EmployeePrimarySkillRequest;
+import com.mycompany.employeeGrpc.employeeImplBase;
+
+import io.grpc.stub.StreamObserver;
+
+public class EmployeeGRPCService extends employeeImplBase {
+
+	@Override
+	public void getEmployeePrimarySkill(EmployeePrimarySkillRequest request,
+			StreamObserver<APIResponse> responseObserver) {
+		
+		System.out.println("Inside getEmployeePrimarySkill");
+		
+		int id = request.getEmpId();
+		
+		//go to data base and return 
+		
+		
+		
+		APIResponse.Builder response = APIResponse.newBuilder();
+		
+		response.setResponseCode(0).setResponsemessage("Success").setPrimarySkill("Java");
+		
+		responseObserver.onNext(response.build());
+		responseObserver.onCompleted();
+		
+	}
+	
+	
+	
+
+}

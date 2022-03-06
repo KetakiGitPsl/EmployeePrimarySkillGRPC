@@ -1,0 +1,25 @@
+package com.mycompany;
+
+import java.io.IOException;
+
+import com.mycompany.service.EmployeeGRPCService;
+
+import io.grpc.Server;
+import io.grpc.ServerBuilder;
+
+public class EmployeeGRPCServer {
+	
+	public static void main(String[] args) throws IOException, InterruptedException {
+		
+		//create server instance
+		Server server = ServerBuilder.forPort(9090).addService(new EmployeeGRPCService()).build();
+		
+		server.start();
+		
+		System.out.println("Server has started now");
+		
+		server.awaitTermination();
+	}
+	
+
+}

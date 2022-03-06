@@ -1,0 +1,37 @@
+package com.mycompany;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.mycompany.Employee.APIResponse;
+import com.mycompany.Employee.EmployeePrimarySkillRequest;
+import com.mycompany.employeeGrpc.employeeBlockingStub;
+
+import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
+
+public class EmpGRPCClient {
+
+	private static final Logger logger = LogManager.getLogger(EmpGRPCClient.class);
+	
+	public static void main(String[] args) {
+		
+		
+		int empID = 5678; //set the employee id for which we need to check the primary skill
+		
+		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",9090).usePlaintext().build();
+
+		// stubs - generate from proto buf
+		employeeBlockingStub empStub = employeeGrpc.newBlockingStub(channel);
+
+		EmployeePrimarySkillRequest employeePrimarySkillRequest = EmployeePrimarySkillRequest.newBuilder().setEmpId(empID).build();
+
+		APIResponse apiResponse = empStub.getEmployeePrimarySkill(employeePrimarySkillRequest);
+		
+
+		logger.info("Employee with id " + empID + " has primary skill as "  + apiResponse.getPrimarySkill());
+		
+	}
+
+	
+}

@@ -1,0 +1,5 @@
+package com.mycompany.dataaccess;
+
+public class EmployeePrimarySkillDataAccess {
+
+}
