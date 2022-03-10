@@ -26,10 +26,10 @@ public class EmpPrimarySkillGRPCClient {
 		// Allow passing in the user and target strings as command line arguments
 		if (args.length > 0) {
 			if ("--help".equals(args[0])) {
-				System.err.println("Usage: [employee ID] [target]");
-				System.err.println("");
-				System.err.println("  employeeID - The employee ID you wish to identify primary skill for. Defaults to 0");
-				System.err.println("  target -     The server to connect to. Defaults to " + target);
+				logger.error("Usage: [employee ID] [target]");
+				logger.error("");
+				logger.error("  employeeID - The employee ID you wish to identify primary skill for. Defaults to 0");
+				logger.error("  target -     The server to connect to. Defaults to " + target);
 				System.exit(1);
 			}
 
