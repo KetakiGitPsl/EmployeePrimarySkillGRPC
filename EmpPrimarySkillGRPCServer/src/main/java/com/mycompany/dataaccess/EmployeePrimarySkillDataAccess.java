@@ -40,5 +40,9 @@ public class EmployeePrimarySkillDataAccess {
 		return pri;
 
 	}
+	
+	private EmployeePrimarySkillDataAccess() {  
+	}  
+	
 
 }
