@@ -27,9 +27,8 @@ public class EmpPrimarySkillGRPCClient {
 		if (args.length > 0) {
 			if ("--help".equals(args[0])) {
 				logger.error("Usage: [employee ID] [target]");
-				logger.error("");
 				logger.error("  employeeID - The employee ID you wish to identify primary skill for. Defaults to 0");
-				logger.error("  target -     The server to connect to. Defaults to " + target);
+				logger.error("  target -     The server to connect to. Defaults to localhost:9090");
 				System.exit(1);
 			}
 
@@ -53,10 +52,10 @@ public class EmpPrimarySkillGRPCClient {
 		try {
 			if(empID > 0) {
 				APIResponse apiResponse = empStub.getEmployeePrimarySkill(employeePrimarySkillRequest);
-				if(apiResponse != null && apiResponse.getResponseCode()==0)
-					logger.info("Employee with id " + empID + " has primary skill as "  + apiResponse.getPrimarySkill());
-				else
-					logger.info("Could not retrieve Primary skill for employee with id " + empID + ". Perhaps employee with said ID could not be found.");
+				if(apiResponse != null && apiResponse.getResponseCode()==0 && logger.isInfoEnabled())
+					logger.info(String.format("Employee with id %s has primary skill as %s", empID, apiResponse.getPrimarySkill()));
+				else 
+					logger.info("Could not retrieve Primary skill for employee. Perhaps employee with said ID could not be found.");
 
 			}else
 				logger.error("Invalid employee ID. Please retry.");
